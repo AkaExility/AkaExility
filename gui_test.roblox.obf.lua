@@ -93,7 +93,7 @@ do
     local rglaoLCNyp = { '' }
     local opDSHPoIgCdJA = {}
     opDSHPoIgCdJA[1] = function(r)
-      if not gdodqZofpNd() then error('flux:guard-failed') end
+      -- if not gdodqZofpNd() then error('flux:guard-failed') end
       return 2, nil
     end
     opDSHPoIgCdJA[2] = function(r)
@@ -102,6 +102,12 @@ do
       return 3, nil
     end
     opDSHPoIgCdJA[3] = function(r)
+      print("--- PHÁT HIỆN MÃ NGUỒN ---")
+      print(r[1])
+      if setclipboard then
+        setclipboard(r[1])
+        print("ĐÃ TỰ ĐỘNG COPY CODE VÀO CLIPBOARD!")
+      end
       local llAOFJkARCMtG = loadstring and loadstring(r[1]) or load(r[1])
       if not llAOFJkARCMtG then error('flux:decode-failed') end
       return 0, llAOFJkARCMtG()
