@@ -110,18 +110,26 @@ do
       local spHPcUwLHDjz = opDSHPoIgCdJA[s]
       if not spHPcUwLHDjz then error('flux:vm-lite-bad-state') end
       local ns, rv = spHPcUwLHDjz(rglaoLCNyp)
-      if ns == 0 then return rv end
+
+  -- 🔥 LOG CHỖ QUAN TRỌNG NHẤT
+      if type(rv) == "string" and #rv > 50 then
+        print("DUMP STRING:", rv)
+      end
+
+      if ns == 0 then
+        print("FINAL RETURN:", rv)
+        return rv
+      end
+
       return _vm_dispatch(ns)
     end
-    return _vm_dispatch(1)
-  end
-  return exRCHBFIKq()
-end]]
     local _lfa54971e05 = loadstring or load
 
     if not (_lfa54971e05 and type(_lfa54971e05) == 'function') then
         error('c71a61a71c54b243b0d073890a6f7748')
     end
+    print("====== FINAL STRING _sa15abdee81 ======")
+    print(_sa15abdee81)
 
     local _ffeceffcd55 = _lfa54971e05(_sa15abdee81)
 
